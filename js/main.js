@@ -1,6 +1,10 @@
 var player = ["scissors", "paper"]
 var items = ["scissors", "paper", "rock"]
 
+function myFunction() {
+   
+    
+    }
 
 
 //switch() {
