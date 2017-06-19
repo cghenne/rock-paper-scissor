@@ -1,5 +1,13 @@
-var player = ["scissors", "paper"]
-var items = ["scissors", "paper", "rock"]
+$(document).ready(function(){
+    $("h1").click(function(){
+        console.log('You Clicked on H1');
+    });
+});
+
+
+var items = ["scissors", "paper", "rock"];
+var score =[0,0];
+
 
 function myFunction() {
    
@@ -57,49 +65,60 @@ function myFunction() {
 
 
 
-
+while (score[0] <3 && score[1] <3) {
+    
+var player = [prompt('player 1'), prompt('player 2')];
 
 if (player[0] === items[0] && player[1] === items[1])
 {
-    document.write ("Player One Wins")
+    document.write ("Player One Wins");
+    score[0] = score[0] + 1;
 }
 
 if (player[0] === items[0] && player[1] === items[2])
 {
-    document.write ("Player Two Wins")
+    document.write ("Player Two Wins");
+    score[1] = score[1] + 1; 
 }
 
 if (player[0] === items[1] && player[1] === items[0])
 {
-    document.write ("Player Two Wins")
+    document.write ("Player Two Wins");
+    score[1] = score[1] + 1; 
 }
 
 if (player[0] === items[2] && player[1] === items[0])
 {
-    document.write ("Player 1 Wins")
+    document.write ("Player One Wins");
+    score[0] = score[0] + 1;
 }
 
 if (player[0] === items[2] && player[1] === items[2])
 {
-    document.write ("Draw! Play again!")
+    document.write ("Draw! Play again!");
 }
 
 if (player[0] === items[0] && player[1] === items[0])
 {
-    document.write ("Draw! Play again!")
+    document.write ("Draw! Play again!");
 }
 
 if (player[0] === items[1] && player[1] === items[2]) 
 { 
-    document.write ("Player 1 Wins")
+    document.write ("Player One Wins");
+    score[0] = score[0] + 1;
 }
 
 if (player[0] === items[1] && player[1] === items[1]) 
 { 
-    document.write ("Draw! Play again!")
+    document.write ("Draw! Play again!");
 }
 
 if (player[0] === items[2] && player[1] === items[1])
 {
-    document.write ("Player Two Wins")
+    document.write ("Player Two Wins");
+    score[1] = score[1] + 1; 
+}; 
+                                                 
 }
+
